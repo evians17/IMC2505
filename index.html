@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosimc.css">
+    <title>DESAFIO-IMC</title>
+</head>
+<body>
+    <header><h1>CALCULA TU IMC</h1></header>
+    <section class="res">
+    <img src="fondo 3.jpg">
+    <section>
+        <h1>Datos para calcular tu indice de masa corporal</h1>
+        <h2>Ingresa tu nombre: </h2>
+        <input type="text">
+        <h2>Ingresa tu peso (kg): </h2>
+        <input type="text" id="a">
+        <h2>Ingresa tu estatura (m): </h2>
+        <input type="number" id="b">
+	    <button id="btn1">IMC</button>
+        <br><br>
+        <h2>Tu indice de masa corporal es: </h2>
+        <div id="resu"></div>
+    </section>
+    <script>
+        Ind=document.getElementById("btn1")
+        Ind.addEventListener('click',IMC)
+        function IMC(){
+            var a=parseFloat(document.getElementById('a').value);
+            var b=parseFloat(document.getElementById('b').value);
+            var x=a/Math.pow(b,2);
+            document.getElementById("resu").innerHTML = " de: "+ Math.round(x,2);}
+       </script>
+</body>
+</html>
